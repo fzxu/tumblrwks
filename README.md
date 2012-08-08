@@ -12,7 +12,7 @@ The recommended way is through the excellent [NPM](http://www.npmjs.org/):
 ## How to use
 
 ``` javascript
-var Tumblr = require('../lib/tumblrwks.js');
+var Tumblr = require('tumblrwks');
 
 /*
   You can get the consumerKey and consumerSecret by registing a tumblr app: http://www.tumblr.com/oauth/apps
