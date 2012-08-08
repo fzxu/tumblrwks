@@ -21,7 +21,8 @@ var Tumblr = require('tumblrwks');
 var tumblr = new Tumblr(
   {
     consumerKey: 'your consumer key'
-  }
+  }//, "arktest.tumblr.com"
+  // specify the blog url now or the time you want to use
 );
 
 tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(json){
