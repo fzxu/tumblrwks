@@ -16,6 +16,26 @@ var Tumblr = require('tumblrwks');
 
 /*
   You can get the consumerKey and consumerSecret by registing a tumblr app: http://www.tumblr.com/oauth/apps
+*/
+
+var tumblr = new Tumblr(
+  {
+    consumerKey: 'your consumer key'
+  }
+);
+
+tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(json){
+  console.log(json);
+});
+
+```
+
+### If want to post that requires OAuth, Need to specify more parameters.
+
+``` javascript
+var Tumblr = require('tumblrwks');
+
+/*
   For accessToken and accessSecret, user need to grant access of your app. I recommend to use: https://github.com/jaredhanson/passport-tumblr
 */
 
@@ -26,10 +46,10 @@ var tumblr = new Tumblr(
     accessToken: 'access token',
     accessSecret: 'access secret'
   }, "arktest.tumblr.com"
-  // you can specify the blog url now or the time you want to use
+  // specify the blog url now or the time you want to use
 );
 
-tumblr.get('/posts', {limit:1, type: 'photo'}, function(json){
+tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}, function(json){
   console.log(json);
 });
 
