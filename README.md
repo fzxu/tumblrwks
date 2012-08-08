@@ -1,7 +1,7 @@
 Tumblr Works!
 =========
 
-One node.js package lib talks to tumblr API that really works.
+One node.js package lib talks to tumblr API v2 that really works.
 
 ## Installation
 
