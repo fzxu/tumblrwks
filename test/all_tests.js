@@ -142,6 +142,13 @@ describe('POST METHOD TESTS', function (){
     });
   });
 
+  // it('post one text blog when specifying blog hostname', function(done){
+  //   tumblr.post('/post', {hostname: 'www.arkxu.com', type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}, function(json){
+  //     assert(json.id);
+  //     done();
+  //   });
+  // });
+
   it('post one link blog', function(done){
     tumblr.post('/post', {type: 'link', title: 'tumblrwks link', url: 'www.arkxu.com'}, function(json){
       assert(json.id);
