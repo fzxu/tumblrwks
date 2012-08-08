@@ -31,7 +31,7 @@ tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(json){
 
 ```
 
-### If want to post that requires OAuth, Need to specify more parameters.
+### Want to post blog? Need to specify more parameters!
 
 ``` javascript
 var Tumblr = require('tumblrwks');
