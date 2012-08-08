@@ -1,7 +1,15 @@
-tumblrwks
+Tumblr Works!
 =========
 
 One node.js package lib talks to tumblr API that really works.
+
+## Installation
+
+The recommended way is through the excellent [NPM](http://www.npmjs.org/):
+
+    $ npm install tumblrwks
+
+## How to use
 
 ``` javascript
 var Tumblr = require('../lib/tumblrwks.js');
