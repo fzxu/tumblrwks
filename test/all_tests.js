@@ -1,8 +1,7 @@
 var Tumblr = require('../lib/tumblrwks.js');
 var assert = require('assert');
 
-var tumblr = new Tumblr(
-  {
+var tumblr = new Tumblr({
     consumerKey: 'your consumer key',
     consumerSecret: 'your consumer secret',
     accessToken: 'access token',
@@ -136,7 +135,7 @@ describe('POST METHOD TESTS', function (){
   });
 
   it('post one text blog', function(done){
-    tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}, function(json){
+    tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! 还有中文</h3>'}, function(json){
       assert(json.id);
       done();
     });

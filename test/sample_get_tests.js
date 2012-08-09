@@ -1,11 +1,9 @@
 var Tumblr = require('../lib/tumblrwks.js');
 var assert = require('assert');
 
-var tumblr = new Tumblr(
-  {
-    consumerKey: 'Qf6HlZz8NCBwUcMSP6PS99b2kUCqzj2J4Aecs91U25hRabgkzB'
-  }
-);
+var tumblr = new Tumblr({
+  consumerKey: 'Qf6HlZz8NCBwUcMSP6PS99b2kUCqzj2J4Aecs91U25hRabgkzB'
+});
 
 describe('SIMPLE TESTS', function (){
   it('should get blog info', function(done){

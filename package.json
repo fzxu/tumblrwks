@@ -24,5 +24,11 @@
   "engines": {
     "node": ">= 0.4.0"
   },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
   "_id": "tumblrwks@0.0.4"
 }
