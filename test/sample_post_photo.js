@@ -1,7 +1,6 @@
 var Tumblr = require('../lib/tumblrwks.js');
 var assert = require('assert');
 var fs = require('fs');
-var querystring = require("querystring");
 
 var tumblr = new Tumblr({
     consumerKey: 'your consumer key',
