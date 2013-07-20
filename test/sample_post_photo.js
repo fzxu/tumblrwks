@@ -16,7 +16,7 @@ describe('SAMPLE POST PHOTO', function (){
       type: 'photo',
       caption: 'Flickr', 
       source: 'http://farm9.staticflickr.com/8294/7733962082_11a1834801.jpg'
-    }, function(json){
+    }, function(err, json){
       console.log(json);
       done();
     });
@@ -32,7 +32,7 @@ describe('SAMPLE POST PHOTO', function (){
     tumblr.post('/post', {
       type: 'photo',
       data: [photo]
-    }, function(json){
+    }, function(err, json){
       console.log(json);
       done();
     });
