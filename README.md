@@ -25,7 +25,7 @@ var tumblr = new Tumblr(
   // specify the blog url now or the time you want to use
 );
 
-tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(json){
+tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(err, json){
   console.log(json);
 });
 
@@ -50,7 +50,7 @@ var tumblr = new Tumblr(
   // specify the blog url now or the time you want to use
 );
 
-tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}, function(json){
+tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}, function(err, json){
   console.log(json);
 });
 
@@ -65,7 +65,7 @@ tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should
 // in general, tumblr api sucks
 var photo = fs.readFileSync('./test/img/P1010486.jpg');
 
-tumblr.post('/post', {type: 'photo', data: [photo]}, function(json){
+tumblr.post('/post', {type: 'photo', data: [photo]}, function(err, json){
   console.log(json);
 });
 
