@@ -8,7 +8,7 @@ var tumblr = new Tumblr({
 describe('SIMPLE TESTS', function (){
   it('should get blog info', function(done){
     // you can specify the hostname when calling
-    tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(json){
+    tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(err, json){
       assert.equal(json.blog.name, 'arktest');
       done();
     });
