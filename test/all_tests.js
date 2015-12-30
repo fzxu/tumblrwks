@@ -220,6 +220,19 @@ describe('GET METHOD [WITH PROMISES] TESTS', function (){
         });
     });
 
+    it('should fail on unknown route', function (done) {
+        tumblr.get('/user/likez').catch(function (error) {
+            done();
+        });
+    });
+
+    it('should fail getting posts from non-existant blog', function (done) {
+        tumblr.hostname = "zobzob3028910zobzobTEST_-_-_.tumblr.com";
+        tumblr.get('/posts').catch(function (error) {
+            done();
+        });
+    });
+
     afterEach(function (done){
         done();
     });
@@ -382,10 +395,16 @@ describe('POST METHOD [WITH PROMISES] TESTS', function (){
   it('delete one text blog', function(done){
     tumblr.post('/post', {type: 'text', title: 'tobedeleted', body: '<h3>You should never seen this!!</h3>'}).then(function (json){
       var blog_id = json.id;
-      tumblr.post('/post/delete', {id: blog_id}, function(err, json){
+      tumblr.post('/post/delete', {id: blog_id}).then(function (json) {
         assert(json.id == blog_id);
         done();
       });
+    });
+  });
+
+  it('should fail deleting a post without authorization', function (done) {
+    tumblr.post('/post', {type: 'text', title: 'tobedeleted', body: '<h3>You should never seen this!!</h3>'}).catch((json) => {
+        done()
     });
   });
 

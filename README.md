@@ -29,6 +29,14 @@ tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(err, json){
   console.log(json);
 });
 
+// Or with Promises
+tumblr.get('/info', {hostname: 'arktest.tumblr.com'})
+    then(function (json) {
+        console.log(json);
+    }, function (error) {
+        console.log(error)
+    });
+});
 ```
 
 ### Want to post blog? Need to specify more parameters!
@@ -51,9 +59,15 @@ var tumblr = new Tumblr(
 );
 
 tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}, function(err, json){
-  console.log(json);
+    console.log(json);
 });
 
+// Or with Promises
+tumblr.post('/post', {type: 'text', title: 'tumblrwkstesting', body: '<h3>should work!! </h3>'}).then(function(json) {
+    console.log(json);
+}, function (error) {
+    console.log(error);
+});
 ```
 
 ### Upload a photo from local disk
@@ -102,4 +116,3 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
