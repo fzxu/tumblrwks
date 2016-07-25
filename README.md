@@ -30,7 +30,7 @@ tumblr.get('/info', {hostname: 'arktest.tumblr.com'}, function(err, json){
 });
 
 // Or with Promises
-tumblr.get('/info', {hostname: 'arktest.tumblr.com'})
+tumblr.get('/info', {hostname: 'arktest.tumblr.com'}).
     then(function (json) {
         console.log(json);
     }, function (error) {
