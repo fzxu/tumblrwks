@@ -34,9 +34,8 @@ tumblr.get('/info', {hostname: 'arktest.tumblr.com'}).
     then(function (json) {
         console.log(json);
     }, function (error) {
-        console.log(error)
+        console.log(error);
     });
-});
 ```
 
 ### Want to post blog? Need to specify more parameters!
